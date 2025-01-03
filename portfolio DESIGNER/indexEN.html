@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <script src="https://kit.fontawesome.com/b8d0e66281.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+    # is for setting a new id -->
+    <div id="header">
+        <!-- . s for setting a new class -->
+        <div class="container">
+            
+            <nav>
+                <img src="IMAGES/logotip.png" class ="logo">
+                <ul id="sidemenu">
+                    <li>  
+                       <a href="#header" >Home</a> 
+                       <a href="#portfolio" >Portfolio</a> 
+                       <a href="#contact" >Contact</a> 
+                       <li class="language">
+                       <a href="indexEN.html" > <img src="IMAGES/UKflag.svg" alt="none">EN</a>
+                       <a href="indexRU.html" > <img src="IMAGES/russianflag.png" alt="none">RU</a>
+                       </li>
+                       <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </li>
+                </ul>
+               
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>Sarvar Abdukhalilov</p>
+                <h1>Graphic / Web / Motion  <br>  <span>Designer</span> </h1>
+            </div>
+    </div>
+    </div>
+
+<!-- portfolio -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="/IMAGES/work-111.png" alt="none">
+                <div class="layer">
+            
+                    <img src="/IMAGES/layer1.png" alt="">
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="IMAGES/work-2222.png" alt="none">
+                <div class="layer">
+                    
+                  <img src="/IMAGES/layer2.png" alt="">
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            
+            <div class="work">
+                <img src="IMAGES/work-333.png" alt="none">
+                <div class="layer"> 
+                    
+                   <video src="/IMAGES/369627669514a1650b5b5effe0b83775.mp4"></video>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            
+        </div>
+
+        <a href="https://drive.google.com/drive/folders/1-RNrJR37XbAT4XOfctXt_O0F3xmHYPhv?usp=sharing" target="_blank"class="btn">See more</a>
+    </div>
+</div>
+
+<!-- Contact -->
+
+    <div id="contact">
+        <div class="conatiner">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> said.sarvar.bek.1999@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +998 (99) 982-49-37</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/_mrsarvar_?igsh=MWh3MW5ndnBjaGY0aA%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sarvar-abdukhalilov-5445aa291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div>
+                        <a href="IMAGES/Sarvar Abdukhalilov (3).pdf" download class="btn btn2"  target="_blank">Download CV</a>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="copyright">
+        <p>Copyright © Sarvar. Made with <i class="fa-solid fa-heart"></i> by Mr. Sarvar</p>
+    </div>
+
+<script>
+        var tablinks=document.getElementsByClassName('tab-links');
+        var tabcontents=document.getElementsByClassName('tab-contents');
+        
+        function opentab(tabname){
+           
+            for (tablink of tablinks){
+                tablink.classList.remove("active-link");
+                
+            }
+            for (tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+                
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+    </script>
+
+    <script>
+        function rusVerison
+
+    </script>
+
+
+
+    <script>
+        var sidemenu= document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right='0';
+
+        }
+
+        function closemenu(){
+            sidemenu.style.right='-200px';
+            
+        }
+
+        
+        document.addEventListener("scroll", function () {
+
+    const nav = document.querySelector("#sidemenu");
+    
+    const firstPage = document.querySelector("#header");
+
+    const secondPage = document.querySelector("#portfolio");
+    
+    const thirdPage = document.querySelector("#contact");
+
+    const secondPageOffset = secondPage.offsetTop;
+
+    const thirdPageOffset = thirdPage.offsetTop;
+
+    const firstPageOffset = firstPage.offsetTop;
+
+    const threshold = 50;
+// Media query to check if screen size is larger than 600px
+const mediaQuery = window.matchMedia("(min-width: 600px)");
+
+function handleScroll() {
+    if (mediaQuery.matches) {
+        // Apply the conditions for screens larger than 600px
+        if (window.scrollY >= secondPageOffset - threshold && window.scrollY < thirdPageOffset) {
+            nav.style.transition = "0.5s";
+            nav.style.position = "fixed";
+            nav.style.top = "45px";
+            nav.style.width = "100vw";
+            nav.style.zIndex = "1";
+            nav.style.left = "650px";
+            nav.style.background = "#ff004f";
+            nav.style.borderRadius = "15px";
+        } else if (window.scrollY >= thirdPageOffset && window.scrollY < firstPageOffset) {
+            nav.style.transition = "0.5s";
+            nav.style.position = "fixed";
+            nav.style.top = "35px";
+            nav.style.width = "100vw";
+            nav.style.zIndex = "1";
+            nav.style.left = "650px";
+            nav.style.background = "black";
+            nav.style.borderRadius = "15px";
+        } else {
+            nav.style.display = "inline-block";
+            nav.style.top = "";
+            nav.style.width = "100%"; // Reset width
+            nav.style.background = ""; // Reset background to original
+            nav.style.borderRadius = ""; // Reset border radius
+        }
+    } else {
+        // Reset styles or leave it unchanged for screens <= 600px
+        nav.style.position = "";
+        nav.style.top = "";
+        nav.style.width = "";
+        nav.style.background = "";
+        nav.style.borderRadius = "";
+    }
+}
+
+// Attach scroll listener
+window.addEventListener("scroll", handleScroll);
+});
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzV-cugPEZL4U9P7U9IZCf1uETe245eOnQhZYsUFLnaGBbpqc5z01EykFTGTwSW3SAa/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg =document.getElementById("msg");
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML= "Message sent sucessfully";
+            setTimeout(function(){
+                msg.innerHTML= "";
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
